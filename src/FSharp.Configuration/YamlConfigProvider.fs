@@ -236,7 +236,7 @@ module private TypesFactory =
 
     let rec transform readOnly name (node: Node) =
         match name, node with
-        | Some name, Scalar (_ as x) -> transformScalar readOnly name x
+        | Some name, Scalar x -> transformScalar readOnly name x
         | _, Map m -> transformMap readOnly name m
         | Some name, List l -> transformList readOnly name l
         | None, _ -> failwithf "Only Maps are allowed at the root level."
@@ -268,7 +268,18 @@ module private TypesFactory =
                 // TODOL Construct the type from all the elements (instead of only the first entry)
                 let headChildren = match children |> Seq.head with Map m -> m | _ -> failwith "expected a sequence of maps."
                 
-                let childTypes, childInits = foldChildren readOnly headChildren
+                let childTypes, _ = foldChildren readOnly headChildren
+
+                let childInits me =
+                    children
+                    |> List.fold (fun acc child -> 
+                        match child with
+                        | Map m -> 
+                            let _, inits = foldChildren readOnly m
+                            inits me :: acc
+                        | _ -> failwith "expected a sequence of maps.") []
+                    |> List.reduce (fun res expr -> Expr.Sequential(res, expr))
+
                 let eventField, event = generateChangedEvent()
                 
                 let mapTy = ProvidedTypeDefinition(name + "_Item_Type", Some typeof<obj>, HideObjectMethods=true, 
@@ -308,7 +319,7 @@ module private TypesFactory =
           Types = childTypes @ [field :> MemberInfo; prop :> MemberInfo]
           Init = fun me -> Expr.FieldSet(me, field, initValue me) }
 
-    and foldChildren readOnly (children: (string * Node) list) =
+    and foldChildren readOnly (children: (string * Node) list) : MemberInfo list * (Expr -> Expr) =
         let childTypes, childInits =
             children
             |> List.map (fun (name, node) -> transform readOnly (Some name) node)

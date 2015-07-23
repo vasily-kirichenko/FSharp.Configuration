@@ -1566,7 +1566,7 @@ type AssemblyGenerator(assemblyFileName) =
     member __.Assembly = assembly :> Assembly
     /// Emit the given provided type definitions into an assembly and adjust 'Assembly' property of all type definitions to return that
     /// assembly.
-    member __.Generate(providedTypeDefinitions:(ProvidedTypeDefinition * string list option) list) = 
+    member __.Generate(providedTypeDefinitions:(ProvidedTypeDefinition * string ResizeArray option) ResizeArray) = 
         let ALL = BindingFlags.Public ||| BindingFlags.NonPublic ||| BindingFlags.Static ||| BindingFlags.Instance
         // phase 1 - set assembly fields and emit type definitions
         begin 
@@ -1600,7 +1600,7 @@ type AssemblyGenerator(assemblyFileName) =
                 typeMembers tb pt 
               | Some ns -> 
                 let otb,_ = 
-                    ((None,""),ns) ||> List.fold (fun (otb:TypeBuilder option,fullName) n -> 
+                    ((None,""),ns) ||> Seq.fold (fun (otb:TypeBuilder option,fullName) n -> 
                         let fullName = if fullName = "" then n else fullName + "." + n
                         let priorType = if typeMapExtra.ContainsKey(fullName) then Some typeMapExtra.[fullName]  else None
                         let tb = 
@@ -1662,7 +1662,7 @@ type AssemblyGenerator(assemblyFileName) =
                 typeMembers pt 
               | Some ns -> 
                 let _fullName  = 
-                    ("",ns) ||> List.fold (fun fullName n -> 
+                    ("",ns) ||> Seq.fold (fun fullName n -> 
                         let fullName = if fullName = "" then n else fullName + "." + n
                         f typeMapExtra.[fullName] None
                         fullName)
@@ -2346,7 +2346,7 @@ type ProvidedAssembly(assemblyFileName: string) =
     let assemblyGenerator = AssemblyGenerator(assemblyFileName)
     let assemblyLazy = 
         lazy 
-            assemblyGenerator.Generate(theTypes |> Seq.toList)
+            assemblyGenerator.Generate(theTypes)
             assemblyGenerator.Assembly
 #if FX_NO_LOCAL_FILESYSTEM
 #else
@@ -2362,7 +2362,7 @@ type ProvidedAssembly(assemblyFileName: string) =
     let add (providedTypeDefinitions:ProvidedTypeDefinition list, enclosingTypeNames: string list option) = 
         for pt in providedTypeDefinitions do 
             if pt.IsErased then invalidOp ("The provided type "+pt.Name+"is marked as erased and cannot be converted to a generated type. Set 'IsErased' to false on the ProvidedTypeDefinition")
-            theTypes.Add(pt,enclosingTypeNames)
+            theTypes.Add(pt, enclosingTypeNames |> Option.map (fun x -> ResizeArray x))
             pt.SetAssemblyLazy assemblyLazy
 
     member x.AddNestedTypes (providedTypeDefinitions, enclosingTypeNames) = add (providedTypeDefinitions, Some enclosingTypeNames)

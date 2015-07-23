@@ -234,7 +234,7 @@ Mail:
     |> should equal [1; 1; 1; 1]
 
 
-type Lists = YamlConfig<"Lists.yaml">
+type Lists = YamlConfig<"Lists.yaml"> 
 
 [<Test>]
 let ``Can load sequence of maps (single item)``() =
