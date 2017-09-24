@@ -76,9 +76,9 @@
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\SharpYAml.csproj">
-      <Name>SharpYAml</Name>
-      <Project>{9cc4ca24-0577-4c78-908c-0484d1166e2a}</Project>
+    <ProjectReference Include="..\SharpYaml\SharpYaml.csproj">
+      <Name>SharpYaml</Name>
+      <Project>{46e52afc-8595-4a2f-b47a-a661e5310683}</Project>
       <Private>True</Private>
     </ProjectReference>
   </ItemGroup>

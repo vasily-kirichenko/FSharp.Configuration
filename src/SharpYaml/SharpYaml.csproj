@@ -1,0 +1,492 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{46E52AFC-8595-4A2F-B47A-A661E5310683}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SharpYaml</RootNamespace>
+    <AssemblyName>SharpYaml</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\CharacterAnalyzer.cs">
+      <Link>CharacterAnalyzer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\CharHelper.cs">
+      <Link>CharHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Constants.cs">
+      <Link>Constants.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Emitter.cs">
+      <Link>Emitter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\EmitterState.cs">
+      <Link>EmitterState.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\EventReader.cs">
+      <Link>EventReader.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Events\AnchorAlias.cs">
+      <Link>Events\AnchorAlias.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Events\DocumentEnd.cs">
+      <Link>Events\DocumentEnd.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Events\DocumentStart.cs">
+      <Link>Events\DocumentStart.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Events\EventType.cs">
+      <Link>Events\EventType.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Events\MappingEnd.cs">
+      <Link>Events\MappingEnd.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Events\MappingStart.cs">
+      <Link>Events\MappingStart.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Events\NodeEvent.cs">
+      <Link>Events\NodeEvent.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Events\ParsingEvent.cs">
+      <Link>Events\ParsingEvent.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Events\Scalar.cs">
+      <Link>Events\Scalar.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Events\SequenceEnd.cs">
+      <Link>Events\SequenceEnd.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Events\SequenceStart.cs">
+      <Link>Events\SequenceStart.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Events\StreamEnd.cs">
+      <Link>Events\StreamEnd.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Events\StreamStart.cs">
+      <Link>Events\StreamStart.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\FakeList.cs">
+      <Link>FakeList.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\IEmitter.cs">
+      <Link>IEmitter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\ILookAheadBuffer.cs">
+      <Link>ILookAheadBuffer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\InsertionQueue.cs">
+      <Link>InsertionQueue.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\IParser.cs">
+      <Link>IParser.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\LookAheadBuffer.cs">
+      <Link>LookAheadBuffer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Mark.cs">
+      <Link>Mark.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\MemoryParser.cs">
+      <Link>MemoryParser.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Parser.cs">
+      <Link>Parser.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\ParserState.cs">
+      <Link>ParserState.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\ScalarStyle.cs">
+      <Link>ScalarStyle.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Scanner.cs">
+      <Link>Scanner.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Schemas\CoreSchema.cs">
+      <Link>Schemas\CoreSchema.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Schemas\ExtendedSchema.cs">
+      <Link>Schemas\ExtendedSchema.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Schemas\FailsafeSchema.cs">
+      <Link>Schemas\FailsafeSchema.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Schemas\IYamlSchema.cs">
+      <Link>Schemas\IYamlSchema.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Schemas\JsonSchema.cs">
+      <Link>Schemas\JsonSchema.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Schemas\SchemaBase.cs">
+      <Link>Schemas\SchemaBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\SemanticErrorException.cs">
+      <Link>SemanticErrorException.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\AnchorEventEmitter.cs">
+      <Link>Serialization\AnchorEventEmitter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\AnchorNotFoundException.cs">
+      <Link>Serialization\AnchorNotFoundException.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\AssemblyRegistry.cs">
+      <Link>Serialization\AssemblyRegistry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\AttributeRegistry.cs">
+      <Link>Serialization\AttributeRegistry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\ChainedEventEmitter.cs">
+      <Link>Serialization\ChainedEventEmitter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\ChainedObjectFactory.cs">
+      <Link>Serialization\ChainedObjectFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\DefaultNamingConvention.cs">
+      <Link>Serialization\DefaultNamingConvention.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\DefaultObjectFactory.cs">
+      <Link>Serialization\DefaultObjectFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\DescriptorCategory.cs">
+      <Link>Serialization\DescriptorCategory.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\Descriptors\ArrayDescriptor.cs">
+      <Link>Serialization\Descriptors\ArrayDescriptor.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\Descriptors\CollectionDescriptor.cs">
+      <Link>Serialization\Descriptors\CollectionDescriptor.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\Descriptors\DefaultKeyComparer.cs">
+      <Link>Serialization\Descriptors\DefaultKeyComparer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\Descriptors\DictionaryDescriptor.cs">
+      <Link>Serialization\Descriptors\DictionaryDescriptor.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\Descriptors\FieldDescriptor.cs">
+      <Link>Serialization\Descriptors\FieldDescriptor.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\Descriptors\MemberDescriptorBase.cs">
+      <Link>Serialization\Descriptors\MemberDescriptorBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\Descriptors\NullableDescriptor.cs">
+      <Link>Serialization\Descriptors\NullableDescriptor.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\Descriptors\ObjectDescriptor.cs">
+      <Link>Serialization\Descriptors\ObjectDescriptor.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\Descriptors\PrimitiveDescriptor.cs">
+      <Link>Serialization\Descriptors\PrimitiveDescriptor.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\Descriptors\PropertyDescriptor.cs">
+      <Link>Serialization\Descriptors\PropertyDescriptor.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\Descriptors\TypeDescriptorFactory.cs">
+      <Link>Serialization\Descriptors\TypeDescriptorFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\DocumentLoadingState.cs">
+      <Link>Serialization\DocumentLoadingState.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\DuplicateAnchorException.cs">
+      <Link>Serialization\DuplicateAnchorException.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\DynamicMemberDescriptorBase.cs">
+      <Link>Serialization\DynamicMemberDescriptorBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\EmitterState.cs">
+      <Link>Serialization\EmitterState.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\EventInfo.cs">
+      <Link>Serialization\EventInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\FlatNamingConvention.cs">
+      <Link>Serialization\FlatNamingConvention.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\IAttributeRegistry.cs">
+      <Link>Serialization\IAttributeRegistry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\IdentityEqualityComparer.cs">
+      <Link>Serialization\IdentityEqualityComparer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\IEventEmitter.cs">
+      <Link>Serialization\IEventEmitter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\IMemberDescriptor.cs">
+      <Link>Serialization\IMemberDescriptor.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\IMemberNamingConvention.cs">
+      <Link>Serialization\IMemberNamingConvention.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\IObjectFactory.cs">
+      <Link>Serialization\IObjectFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\IObjectSerializerBackend.cs">
+      <Link>Serialization\IObjectSerializerBackend.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\IOrderedDictionary.cs">
+      <Link>Serialization\IOrderedDictionary.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\ITagTypeRegistry.cs">
+      <Link>Serialization\ITagTypeRegistry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\ITagTypeResolver.cs">
+      <Link>Serialization\ITagTypeResolver.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\ITypeDescriptor.cs">
+      <Link>Serialization\ITypeDescriptor.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\ITypeDescriptorFactory.cs">
+      <Link>Serialization\ITypeDescriptorFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\IYamlSerializable.cs">
+      <Link>Serialization\IYamlSerializable.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\IYamlSerializableFactory.cs">
+      <Link>Serialization\IYamlSerializableFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\IYamlVisitor.cs">
+      <Link>Serialization\IYamlVisitor.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\JsonEventEmitter.cs">
+      <Link>Serialization\JsonEventEmitter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\LambdaObjectFactory.cs">
+      <Link>Serialization\LambdaObjectFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\Logging\ILogger.cs">
+      <Link>Serialization\Logging\ILogger.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\Logging\LogLevel.cs">
+      <Link>Serialization\Logging\LogLevel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\ObjectContext.cs">
+      <Link>Serialization\ObjectContext.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\OrderedDictionary.cs">
+      <Link>Serialization\OrderedDictionary.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\Serializer.cs">
+      <Link>Serialization\Serializer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\SerializerContext.cs">
+      <Link>Serialization\SerializerContext.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\SerializerContextSettings.cs">
+      <Link>Serialization\SerializerContextSettings.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\SerializerSettings.cs">
+      <Link>Serialization\SerializerSettings.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\Serializers\AnchorSerializer.cs">
+      <Link>Serialization\Serializers\AnchorSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\Serializers\ArraySerializer.cs">
+      <Link>Serialization\Serializers\ArraySerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\Serializers\ChainedSerializer.cs">
+      <Link>Serialization\Serializers\ChainedSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\Serializers\CollectionSerializer.cs">
+      <Link>Serialization\Serializers\CollectionSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\Serializers\DefaultObjectSerializerBackend.cs">
+      <Link>Serialization\Serializers\DefaultObjectSerializerBackend.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\Serializers\DictionarySerializer.cs">
+      <Link>Serialization\Serializers\DictionarySerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\Serializers\ObjectSerializer.cs">
+      <Link>Serialization\Serializers\ObjectSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\Serializers\PrimitiveSerializer.cs">
+      <Link>Serialization\Serializers\PrimitiveSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\Serializers\RoutingSerializer.cs">
+      <Link>Serialization\Serializers\RoutingSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\Serializers\ScalarSerializerBase.cs">
+      <Link>Serialization\Serializers\ScalarSerializerBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\Serializers\TagTypeSerializer.cs">
+      <Link>Serialization\Serializers\TagTypeSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\WriterEventEmitter.cs">
+      <Link>Serialization\WriterEventEmitter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\YamlAliasNode.cs">
+      <Link>Serialization\YamlAliasNode.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\YamlDocument.cs">
+      <Link>Serialization\YamlDocument.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\YamlIgnoreAttribute.cs">
+      <Link>Serialization\YamlIgnoreAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\YamlMappingNode.cs">
+      <Link>Serialization\YamlMappingNode.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\YamlMemberAttribute.cs">
+      <Link>Serialization\YamlMemberAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\YamlNode.cs">
+      <Link>Serialization\YamlNode.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\YamlNodeIdentityEqualityComparer.cs">
+      <Link>Serialization\YamlNodeIdentityEqualityComparer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\YamlRemapAttribute.cs">
+      <Link>Serialization\YamlRemapAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\YamlScalarNode.cs">
+      <Link>Serialization\YamlScalarNode.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\YamlSequenceNode.cs">
+      <Link>Serialization\YamlSequenceNode.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\YamlSerializableMethod.cs">
+      <Link>Serialization\YamlSerializableMethod.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\YamlStream.cs">
+      <Link>Serialization\YamlStream.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\YamlStyleAttribute.cs">
+      <Link>Serialization\YamlStyleAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\YamlTagAttribute.cs">
+      <Link>Serialization\YamlTagAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Serialization\YamlVisitor.cs">
+      <Link>Serialization\YamlVisitor.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\SimpleKey.cs">
+      <Link>SimpleKey.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\SortedDictionary.cs">
+      <Link>SortedDictionary.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\StringExtensions.cs">
+      <Link>StringExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\StringLookAheadBuffer.cs">
+      <Link>StringLookAheadBuffer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\SyntaxErrorException.cs">
+      <Link>SyntaxErrorException.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\TagDirectiveCollection.cs">
+      <Link>TagDirectiveCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Tokens\Anchor.cs">
+      <Link>Tokens\Anchor.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Tokens\AnchorAlias.cs">
+      <Link>Tokens\AnchorAlias.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Tokens\BlockEnd.cs">
+      <Link>Tokens\BlockEnd.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Tokens\BlockEntry.cs">
+      <Link>Tokens\BlockEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Tokens\BlockMappingStart.cs">
+      <Link>Tokens\BlockMappingStart.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Tokens\BlockSequenceStart.cs">
+      <Link>Tokens\BlockSequenceStart.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Tokens\DocumentEnd.cs">
+      <Link>Tokens\DocumentEnd.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Tokens\DocumentStart.cs">
+      <Link>Tokens\DocumentStart.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Tokens\FlowEntry.cs">
+      <Link>Tokens\FlowEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Tokens\FlowMappingEnd.cs">
+      <Link>Tokens\FlowMappingEnd.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Tokens\FlowMappingStart.cs">
+      <Link>Tokens\FlowMappingStart.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Tokens\FlowSequenceEnd.cs">
+      <Link>Tokens\FlowSequenceEnd.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Tokens\FlowSequenceStart.cs">
+      <Link>Tokens\FlowSequenceStart.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Tokens\Key.cs">
+      <Link>Tokens\Key.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Tokens\Scalar.cs">
+      <Link>Tokens\Scalar.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Tokens\StreamEnd.cs">
+      <Link>Tokens\StreamEnd.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Tokens\StreamStart.cs">
+      <Link>Tokens\StreamStart.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Tokens\Tag.cs">
+      <Link>Tokens\Tag.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Tokens\TagDirective.cs">
+      <Link>Tokens\TagDirective.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Tokens\Token.cs">
+      <Link>Tokens\Token.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Tokens\Value.cs">
+      <Link>Tokens\Value.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Tokens\VersionDirective.cs">
+      <Link>Tokens\VersionDirective.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\TypeExtensions.cs">
+      <Link>TypeExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\Version.cs">
+      <Link>Version.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\YamlException.cs">
+      <Link>YamlException.cs</Link>
+    </Compile>
+    <Compile Include="..\..\paket-files\xoofx\SharpYaml\SharpYaml\YamlStyle.cs">
+      <Link>YamlStyle.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
