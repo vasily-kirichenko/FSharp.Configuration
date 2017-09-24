@@ -1,9 +1,7 @@
 source http://nuget.org/api/v2
 framework: >= net45
 
-nuget SharpYaml
 nuget FSharp.Core ~> 4.0.0
-
 
 group Build
     framework: net45
@@ -15,6 +13,7 @@ group Build
     nuget NuGet.CommandLine
     nuget SourceLink.Fake
 
+    github xoofx/SharpYaml
     github fsharp/FAKE modules/Octokit/Octokit.fsx
 
 group Test

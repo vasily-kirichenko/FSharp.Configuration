@@ -1,11 +1,12 @@
-FRAMEWORK: >= NET45
+RESTRICTION: >= net45
 NUGET
   remote: http://www.nuget.org/api/v2
     FSharp.Core (4.0.0.1)
-    SharpYaml (1.6.1)
-
+GITHUB
+  remote: xoofx/SharpYaml
+    FULLPROJECT (a83d1836dc5d40ad7a5f53c90a92fd92e6794fd2)
 GROUP Build
-FRAMEWORK: NET45
+RESTRICTION: == net45
 NUGET
   remote: https://www.nuget.org/api/v2
     FAKE (4.61.3)
@@ -19,11 +20,13 @@ NUGET
     Octokit (0.24)
     SourceLink.Fake (1.1)
 GITHUB
+  remote: xoofx/SharpYaml
+    FULLPROJECT (a83d1836dc5d40ad7a5f53c90a92fd92e6794fd2)
   remote: fsharp/FAKE
-    modules/Octokit/Octokit.fsx (574f6259c4abec2ae45b8c888aa1bdc9b5d4e842)
+    modules/Octokit/Octokit.fsx (02774735325914cd48d85d63887e3f07f616b96a)
       Octokit (>= 0.20)
 GROUP Test
-FRAMEWORK: NET461
+RESTRICTION: == net461
 NUGET
   remote: https://www.nuget.org/api/v2
     Argu (3.7)
